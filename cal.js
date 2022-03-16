@@ -1,42 +1,10 @@
-let a = 0;
-let b = 0 ;
-
-function add(a,b){
-    return a+b
-}
-
-function subtract(a,b){
-    return a-b
-}
-
-function multiply(a,b){
-    return a*b
-}
-
-function divide(a,b){
-    return a/b
-}
-
-function power(a,b){
-    return Math.pow(a,b)
-}
-
-function getReminder(a,b){
-    return a%b
-}
+let currentValue=``;
+let firstValue=``;
+let operator= ``;
+let secondValue=``;
 
 
-function operate(operator,a,b){
-    if (operator==='+'){add(a,b)
- }  if (operator==='-'){subtract(a,b)
-} if ( operator==='*'){multiply(a,b)
-}  if(operator==='/'){divide(a,b)
 
-}if(operator==="^"){power(a,b)
-
-}if(operator ==='%'){getReminder(a,b)}
-
-}
 
 const screen = document.querySelector('.display')
 screen.textContent='';
@@ -44,15 +12,16 @@ screen.textContent='';
 const keys=document.querySelectorAll('.key')
  keys.forEach(key=> 
     key.addEventListener('click',(e)=>{
-        screen.textContent += e.target.value
-        firstValue=parseInt(screen.textContent)
+        screen.textContent += e.target.value;
+        currentValue +=e.target.value;
     }       
        ))
  
  const operationKeys= document.querySelectorAll('#operation')
 operationKeys.forEach((elem)=>{
     elem.addEventListener('click',function(e){
-       let operator = e.target.value ;
+        firstValue +=currentValue
+        operator += e.target.value ;
        screen.textContent+=e.target.value; 
        getOtherValue()   
     })
@@ -62,11 +31,50 @@ const lowerDisplay = document.querySelector('.lowerDisplay')
 lowerDisplay.textContent='';
 
 function getOtherValue(){
-  let secondValue =``;
+  
     keys.forEach(key=> 
         key.addEventListener('click',(e)=>{
             secondValue += e.target.value
             
           }))}
+
+
+function operate(a,b,operator){
+
+  
+
+    
+            if (operator==='+'){return add(a,b)
+         }  if (operator==='-'){return subtract(a,b)
+        } if ( operator==='*'){return multiply(a,b)
+        }  if(operator==='/'){return divide(a,b)
+        
+        }if(operator==="^"){return power(a,b)
+        
+        }if(operator ==='%'){ return getReminder(a,b)}
+        
+        }   
+        
+
+        
+        function add(a,b){return a+b}
+        
+        function subtract(a,b){
+            return a-b
+        }
+        
+        function multiply(a,b){return a*b}
+        
+        function divide(a,b){
+            if(b===0){return "Error"}
+            else{return a/b}
+            
+        }
+        
+        function power(a,b){return Math.pow(a,b)}
+        
+        function getReminder(a,b){
+            return a%b
+        }
     
 
