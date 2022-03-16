@@ -5,47 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <script src="cal.js"  defer ></script>
     <link rel="stylesheet" href="style.css">
-    <script src="cal.js"></script>
+    
 </head>
-<div class="frame">
-  <div class="screen">1+1=2</div>
-  <div class="buttonContainer">
-    <button class ='button'>=</button>
-    <button class ='button'>=</button>
-    <button class ='button'>Del</button>
-    <button class ='button'>CE</button>
-    <button class ='button'>+/-</button>
-    <button class ='button'>%</button>
-    <button class ='button'>^</button>
-    <button class ='button'>/</button>
-    <button class ='button'>7</button>
-    <button class ='button'>8</button>
-    <button class ='button'>9</button>
-    <button class ='button'>×</button>
-    <button class ='button'>4</button>
-    <button class ='button'>5</button>
-    <button class ='button'>6</button>
-    <button class ='button'>-</button>
-    <button class ='button'>1</button>
-    <button class ='button'>2</button>
-    <button class ='button'>3</button>
-    <button class ='button'>+</button>
-    <button class ='button'>.</button>
-    <button class ='button'>0</button>
-    <button class ='button'>=</button>
-    <button class ='button'>=</button>
-    
-    
-    
-
-    
-  </div>
-</div>
-
-
 
 <body>
-    
+    <div class="frame">
+        <div class= 'display' id="screen"></div>
+            
+        <div class="lowerDisplay"></div>
+        
+
+        <div class="buttonContainer">
+          <button class ='button'>=</button>
+          <button class ='button'>=</button>
+          <button class ='button'>Del</button>
+          <button class ='button'>CE</button>
+          <button class ='button' value="-">+/-</button>
+          <button class ='button' value="%">%</button>
+          <button class ='button' value="^">^</button>
+          <button class ='button' value="/" id="operation">/</button>
+          <button class ='button key' value="7">7</button>
+          <button class ='button key' value="8">8</button>
+          <button class ='button key'  value="9" >9</button>
+          <button class ='button ' value="*"id="operation" >×</button>
+          <button class ='button key' value='4'>4</button>
+          <button class ='button key' value="5">5</button>
+          <button class ='button key' value="6">6</button>
+          <button class ='button' value="-" id="operation">-</button>
+          <button class ='button key' value="1">1</button>
+          <button class ='button key' value="2">2</button>
+          <button class ='button key' value="3">3</button>
+          <button class ='button' value="+" id="operation">+</button>
+          <button class ='button key' value=".">.</button>
+          <button class ='button key' value="0">0</button>
+          <button class ='button'>=</button>
+          <button class ='button'>=</button>
+          
+          
+          
+      
+          
+        </div>
+      </div>
+      
 </body>
 </html>
