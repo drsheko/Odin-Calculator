@@ -5,30 +5,43 @@ body{
     display:flex;
     flex-direction: column;
     align-items: center;
+    background-color: black;
     
 
 }
 
 
 .frame{
-    width: 70% ;
-    height: 20em;
+    width: 40% ;
+    height: 23em;
     margin-top:3em;
     background-color: darkgray;
+    border-radius: 3%;
 
 }
 
-.screen{
+.display{
     background-color:bisque ;
     width:80%;
-    height: 20%;
+    height: 5%;
     padding: 3px ;
-    margin:12px 15px;
+    margin:12px 32px 0;
+    display:flex;
 }
 
+.lowerDisplay{
+    background-color:bisque ;
+    width:80%;
+    height: 15%;
+    padding: 3px ;
+    margin:0px 32px 12px;
+    display:flex;
+    align-items: flex-end;
+    font-size: 35px;
+}
 .buttonContainer{
     margin:8px;
-    padding :3px;
+    padding :3px 25px;
     
     display:flex;
     flex-wrap: wrap;
@@ -40,12 +53,20 @@ body{
 }
 
 .button{
-    width:22%;
-    height:35px;
+    width: 60px;;
+    height:40px;
     border-radius: 20%;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
     
 
 
+}
+
+.button:hover{
+    background-color: dimgray;
+}
+
+#equal{
+width:120px;
 }
